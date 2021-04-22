@@ -1,5 +1,3 @@
-import com.sun.deploy.security.SelectableSecurityManager;
-
 import java.util.Scanner;
 
 public class Main {
@@ -45,7 +43,8 @@ public class Main {
         }*/
 
         //Write code for loops to check if current song on repeat
-        CheckSongOnRepeat();
+       /* CheckSongOnRepeat();*/
+        MultipleChoiceExercise();
     }
 
     public static void CheckSongOnRepeat()
@@ -66,6 +65,32 @@ public class Main {
         System.out.println("Playing same song again");
     }
 
+    public static void MultipleChoiceExercise()
+    {
+        // implement a multiple-choice question
+        //1st
+        String question = "Where is the crossfit 399 located?";
+        String answerOne= "Avenue K";
+        String answerTwo = "Damansara";
+        String answerThree = "London";
+        System.out.println("Here is the question:" + question);
+        System.out.println("please select one of the answer below: ");
+        System.out.println(answerOne);
+        System.out.println(answerTwo);
+        System.out.println(answerThree);
+        System.out.println("Please enter your answerer: ");
+        Scanner input = new Scanner(System.in);
+        String userInput = input.nextLine();
+        System.out.println(userInput);
+        if (userInput.equals(answerOne))
+        {
+            System.out.println("DING DONG!YOUR ANSWER IS CORRECT");
+        }
+        else
+        {
+            System.out.println("YOUR ANSWER IS INCORRECT");
+        }
+    }
 
 
 
