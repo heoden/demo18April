@@ -1,3 +1,5 @@
+import com.sun.deploy.security.SelectableSecurityManager;
+
 import java.util.Scanner;
 
 public class Main {
@@ -43,7 +45,25 @@ public class Main {
         }*/
 
         //Write code for loops to check if current song on repeat
+        CheckSongOnRepeat();
+    }
 
+    public static void CheckSongOnRepeat()
+    {
+        Boolean isCurrentSongOnRepeat = true;
+        Scanner inputValue = new Scanner(System.in);
+
+        while(isCurrentSongOnRepeat)
+        {
+            String userInput = inputValue.next();
+            System.out.println("Here is user input:" + userInput);
+            System.out.println("Would you like to stop the song: ");
+            if(userInput.equals("Yes"))
+            {
+                isCurrentSongOnRepeat = false;
+            }
+        }
+        System.out.println("Playing same song again");
     }
 
 
