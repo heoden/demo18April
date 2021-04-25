@@ -44,7 +44,23 @@ public class Main {
 
         //Write code for loops to check if current song on repeat
        /* CheckSongOnRepeat();*/
-        MultipleChoiceExercise();
+        /*MultipleChoiceExercise();*/
+       /* double mealPrice = CalculateMealPrice(100, 0.20, 0.08);
+        int numberOfPerson;
+        System.out.println("Please input number of person: ");
+        Scanner input = new Scanner(System.in);
+        numberOfPerson = input.nextInt();
+        double mealPriceEachPerson = mealPrice / numberOfPerson;
+        System.out.println("meal price for each person is: " + mealPriceEachPerson);*/
+        /*Triangle test1 = new Triangle(10,20, 30, 40, 50);
+        double result = test1.FindArea();
+        System.out.println("result is: " + result);*/
+
+        //Using StudentProfile
+
+        StudentProfile test2 = new StudentProfile("uyen", "ho", 1988, 4.0, "computer Siences");
+        double year = test2.IncrementExpectedGraduationYear();
+        System.out.println(year);
     }
 
     public static void CheckSongOnRepeat()
@@ -92,9 +108,20 @@ public class Main {
         }
     }
 
+    public static double CalculateMealPrice(double ListMealPrice, double tipRate, double taxRate)
+    {
+        double tips = ListMealPrice * tipRate;
+        double tax = ListMealPrice * taxRate;
+        double totalMealPrice = ListMealPrice + tips + tax;
+        System.out.println("your meal price is: " + totalMealPrice);
+        return  totalMealPrice;
+    }
 
-
-
-
+    public static double CalculateEmployeeSalary(double houPerWeek,double salaryPerHour, double numberOfVacationDays)
+    {
+        double numberofVacationHours = numberOfVacationDays * 8;
+        double grossSalary = houPerWeek * salaryPerHour - salaryPerHour*numberofVacationHours;
+        return grossSalary;
+    }
 }
 
